@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+/* Header */
+.navbar{
+    padding: 30px 100px;
+    background: #fff !important;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    z-index: 2;
+}
+.navbar .container-fluid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-collapse{
+    flex-grow: unset;
+}
+.nav-item{
+    padding-inline: 10px;
+    font-size: 18px;
+}
+.head-icon{
+    display: flex;
+    gap: 20px;
+}
+.head-icon img{
+    width: 30px;
+}
+.admin--section{
+    padding-top: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
+    min-height: 70vh;
+}
+.admin--section h1{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    padding-bottom: 30px;
+}
+.admin-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.admin-btn button{
+    border: none;
+    outline: none;
+    width: 200px;
+    margin: 15px;
+}
+.admin-btn button a{
+    padding: 10px 20px;
+    background-color: #518581;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+.admin-btn button a:hover{
+    background-color: #fff;
+    border: 2px solid #518581;
+    color: #000;
+}
+.admin--section .container{
+    padding: 50px 0;
+}
+.admin--section .container form{
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 72% 28%;
+}
+.admin--section .container form input{
+    outline: none;
+    border: none;
+    color: #AFADB5;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+.admin--section .container form input::placeholder{
+    color: #AFADB5;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+}
+.admin--section .container form input:focus{
+    outline: none;
+    box-shadow: none;
+}
+.admin--section .container form input[type="submit"]{
+    background-color: #518581;
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 10px 40px !important;
+    border-radius: 0;
+}
+
+/* Insert Product */
+.insert-product form{
+    width: 70%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.insert-product form .form--outline {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+}
+.insert-product form .form--outline label{
+    padding: 5px 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+}
+.insert-product form .form--outline input, .form-select, .insert-product #product_description{
+    outline: none;
+    color: #AFADB5;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+.insert-product form .form--outline input::placeholder, #product_description::placeholder{
+    color: #AFADB5;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+}
+.form-select:focus{
+    border: 1px solid #eee;
+}
+.insert-product form .form--outline input:focus, .form-select:focus{
+    outline: none;
+    box-shadow: none;
+    /* border-color: none; */
+}
+.insert-product form .form--outline input[type="submit"]{
+    background-color: #518581;
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 10px 40px !important;
+    border-radius: 0;
+    margin-top: 20px;
+}
+/* Footer */
+.footer{
+    padding: 70px 100px;
+    border-top: 1px solid #eee;
+}
+.left-side{
+    padding-right: 16em;
+}
+.left-side p{
+    padding-top: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.right-side .row .col-md-12{
+    display: flex;
+    flex-direction: column;
+}
+.right-side .row .col-md-12 h2{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+}
+.right-side .row .col-md-12 a{
+    text-decoration: none;
+    color: #151411;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 10px 0;
+}
+.footer .row{
+    display: grid;
+    grid-template-columns: 67% 20%;
+}
+@media screen and (max-width:768px) {
+    .navbar{
+        padding: 10px 20px;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .admin--section{
+        padding-top: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .admin--section h1{
+        font-size: 26px;
+        line-height: 34px;
+        padding-bottom: 20px; 
+    }
+    .insert-product form{
+        width: 100%;
+    }
+    .insert-product form .form--outline label{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .insert-product form .form--outline input, .form-select, .insert-product #product_description{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .insert-product form .form--outline input::placeholder, #product_description::placeholder{
+        color: #AFADB5;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+    }
+    .footer{
+        padding: 40px 20px;
+    }
+    .footer .row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .left-side{
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .left-side p{
+        padding-top: 20px;
+    }
+}

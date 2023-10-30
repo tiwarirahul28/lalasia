@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+/* Header */
+.navbar{
+    padding: 30px 100px;
+    background: #fff !important;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    z-index: 2;
+}
+.navbar-collapse{
+    flex-grow: unset;
+}
+.nav-item{
+    padding-inline: 10px;
+    font-size: 18px;
+}
+.head-icon{
+    display: flex;
+    gap: 20px;
+}
+.head-icon img{
+    width: 30px;
+}
+
+/* Banner */
+.banner{
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+.banner .container-fluid h1::before{
+    content: '';
+    position: absolute;
+    background: url('/images/Sketch-annotation-element-stroke-line-arrow-spiral-down-5.png') no-repeat;
+    background-size: 50px;
+    top: 50%;
+    left: 50%;
+    z-index: 999999999;
+
+}
+.banner .container-fluid{
+    text-align: center;
+    width: 55%;
+    margin: auto;
+}
+.banner .container-fluid span{
+    position: absolute;
+    left: 7%;
+    bottom: -10%;
+}
+.banner .container-fluid .star--icon{
+    position: absolute;
+    right: -36em;
+    top: 51%;
+}
+.banner .container-fluid .star--icon img{
+    width: 80px;
+    height: auto;
+}
+.banner .container-fluid h1{
+    font-size: 64px;
+    line-height: 74px;
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+.banner .container-fluid p{
+    color: #AFADB5;
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 400;
+}
+.banner-form{
+    width: 65%;
+    margin: auto;
+    background-color: #fff;
+    display: flex;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+.banner-form img{
+    width: 30px;
+    height: 30px;
+}
+.banner-form input{
+    outline: none;
+    border: none;
+    color: #AFADB5;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+.banner-form input::placeholder{
+    color: #AFADB5;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+}
+.banner-form input:focus{
+    outline: none;
+    box-shadow: none;
+}
+.banner-form button{
+    background-color: #518581;
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 10px 40px;
+    border-radius: 0;
+}
+.banner-container{
+    padding: 0 100px 100px;
+}
+.banner-container .banner-img{
+    margin-top: -3em;
+}
+.banner-container .banner-img img{
+    width: 100%;
+}
+
+/* Footer */
+.footer{
+    padding: 70px 100px;
+}
+.left-side{
+    padding-right: 16em;
+}
+.left-side p{
+    padding-top: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.right-side .row .col-md-4{
+    display: flex;
+    flex-direction: column;
+}
+.right-side .row .col-md-4 h2{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+}
+.right-side .row .col-md-4 a{
+    text-decoration: none;
+    color: #151411;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 10px 0;
+}
+.benefits--section{
+    padding: 100px 100px;
+}
+.top--content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18em;
+    padding-bottom: 30px;
+}
+.orange--heading{
+    font-size: 18px;
+    color: #FFB23F;
+    font-weight: 600;
+    line-height: 24px;
+}
+.heading{
+    font-size: 44px;
+    color: #151411;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: .5px;
+}
+.para{
+    color: #AFADB5;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    padding-top: 44px;
+}
+.bottom--content{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.bottom--content .benefits--cards{
+    padding: 30px;
+    box-shadow: 0px 4px 100px 0px #AFADB51A;
+}
+
+.bottom--content .benefits--cards img{
+    width: 62px;
+    height: 60px;
+    padding: 15px;
+    background: #F9F9F9;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.bottom--content .benefits--cards h3{
+    color: #151411;
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.bottom--content .benefits--cards p{
+    font-size: 18px;
+    line-height: 34px;
+    color: #AFADB5;
+}
+
+/* Product */
+.product--section{
+    padding: 100px;
+    text-align: center;
+}
+
+.product--slider{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 30px;
+    padding-top: 50px;
+}
+.product--slider::-webkit-scrollbar {
+    display: none;
+  }
+.product--slider .product--card{
+    /* width: 400px !important; */
+    margin-inline: 20px;
+    text-align: left;
+    height: 500px;
+}
+.product--slider .slick-prev, .product--slider .slick-next{
+    color: #fff;
+    background: transparent;
+    border: none;
+    width: 0; 
+}
+/* .product--slider .slick-prev::before{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 25px;
+    background-image: url('./images/arrow-left.png') !important;
+    display: block;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+    background: #15141199;
+    border-radius: 50%;
+}
+.product--slider .slick-next::before{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 25px;
+    background-image: url('./images/arrow-right.png') !important;
+    display: block;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+    background: #15141199;
+    border-radius: 50%;
+} */
+.product--section .product--card .procduct--card--img{
+    height: 300px;
+}
+.product--section .product--card img{
+    width: 100%;
+    aspect-ratio: 5/4;
+    height: 100%;
+}
+.product--section .product--card .product--card--info{
+    height: 200px;
+    position: relative;
+    padding: 32px 0px;
+}
+.product--section .product--card .product--card--info .category{
+    font-size: 18px;
+    color: #AFADB5;
+    line-height: 23.4px;
+    font-weight: 400;
+}
+.product--section .product--card h3{
+    font-size: 24px;
+    color: #151411;
+    line-height: 33.8px;
+    font-weight: 400;
+    white-space: pre-line;
+}
+.product--section .product--card .product--card--info span{
+    font-size: 18px;
+    color: #AFADB5;
+    line-height: 23px;
+    font-weight: 400;
+    /* position: absolute;
+    bottom: 62px; */
+}
+.product--section .product--card .product--card--info .price{
+    font-size: 26px;
+    color: #151411;
+    line-height: 34px;
+    font-weight: 600;
+    white-space: pre-line;
+    position: absolute;
+    bottom: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        padding: 10px 20px;
+    }
+    .navbar-collapse{
+        flex-grow: 1;
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
+    .banner{
+        height: 50vh;
+        padding-top: 50px;
+    }
+    .banner .container-fluid{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .banner .container-fluid h1{
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .banner-container{
+        padding: 0 20px;
+    }
+    .banner-form{
+        width: 100%;
+    }
+    .banner-form input, .banner-form button{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .banner-container .banner-img{
+        margin-top: 2em;
+    }
+    .footer{
+        padding: 40px 20px;
+    }
+    .left-side{
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .right-side .row .col-md-4{
+        padding-bottom: 20px;
+    }
+    .benefits--section{
+        padding: 50px 20px;
+    }
+    .top--content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .top--content .topleft-content h2{
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 0px;
+    }
+    .top--content .topright-content p{
+        padding-top: 0;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .bottom--content{
+        padding-top: 0px; 
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .bottom--content .benefits--cards h3{
+        font-size: 16px;
+        line-height: 30px;
+        padding-bottom: 0;
+    }
+    .bottom--content .benefits--cards p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
