@@ -56,7 +56,7 @@
     width: 55%;
     margin: auto;
 }
-.banner .container-fluid span{
+.banner .container-fluid .arrow{
     position: absolute;
     left: 7%;
     bottom: -10%;
@@ -245,7 +245,11 @@
 }
 .product--slider::-webkit-scrollbar {
     display: none;
-  }
+}
+.product--section .para{
+    width: 60%;
+    margin: auto;
+}
 .product--slider .product--card{
     /* width: 400px !important; */
     margin-inline: 20px;
@@ -327,6 +331,17 @@
 }
 
 @media screen and (max-width: 768px) {
+    .orange--heading{
+        font-size: 18px;
+        color: #FFB23F;
+        font-weight: 600;
+        line-height: 24px;
+    }
+    .heading{
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 0px;
+    }
     .navbar{
         padding: 10px 20px;
     }
@@ -344,6 +359,19 @@
         width: 100%;
         padding: 0 20px;
     }
+    .banner .container-fluid .arrow{
+        left: -4%;
+        top: 20%;
+        width: 100px;
+    }
+    .banner .container-fluid .star--icon{
+        right: 8%;
+        top: 28%;
+        width: 40px;
+    }
+    .banner .container-fluid .arrow img, .banner .container-fluid .star--icon img{
+        width: 100%;
+    } 
     .banner .container-fluid h1{
         font-size: 26px;
         line-height: 34px;
@@ -371,19 +399,18 @@
     .right-side .row .col-md-4{
         padding-bottom: 20px;
     }
-    .benefits--section{
+    .benefits--section, .product--section{
         padding: 50px 20px;
     }
     .top--content{
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
-    .top--content .topleft-content h2{
-        font-size: 24px;
-        line-height: 34px;
-        margin-bottom: 0px;
+    .product--section .para{
+        width: 100%;
+        margin: auto;
     }
-    .top--content .topright-content p{
+    .para{
         padding-top: 0;
         font-size: 14px;
         line-height: 24px;
@@ -401,5 +428,23 @@
     .bottom--content .benefits--cards p{
         font-size: 14px;
         line-height: 26px;
+    }
+    .product--slider{
+        gap: 5px;
+    }
+    .product--section .product--card .product--card--info span{
+        white-space: pre-line;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .product--section .product--card h3{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .product--section .product--card .product--card--info .price{
+        font-size: 16px;
+        line-height: 24px;
+        white-space: pre-line;
+        bottom: 4em;
     }
 }

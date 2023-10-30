@@ -27,7 +27,7 @@
                         <a href="" class="nav-link">View Product</a>
                     </button>
                     <button>
-                        <a href="admin.php?insert-category" class="nav-link">Insert Categories</a>
+                        <a href="index.php?insert-category" class="nav-link">Insert Categories</a>
                     </button>
                     <button>
                         <a href="" class="nav-link">View Categories</a>

@@ -178,16 +178,16 @@
     font-weight: 300;
     line-height: 24px;
 }
-.right-side .row .col-md-12{
+.right-side .rows .footer--info{
     display: flex;
     flex-direction: column;
 }
-.right-side .row .col-md-12 h2{
+.right-side .rows .footer--info h2{
     font-size: 20px;
     font-weight: 600;
     line-height: 22px;
 }
-.right-side .row .col-md-12 a{
+.right-side .rows .footer--info a{
     text-decoration: none;
     color: #151411;
     font-size: 18px;
@@ -197,7 +197,7 @@
 }
 .footer .row{
     display: grid;
-    grid-template-columns: 67% 20%;
+    grid-template-columns: 67% 33%;
 }
 @media screen and (max-width:768px) {
     .navbar{
@@ -215,6 +215,21 @@
         font-size: 26px;
         line-height: 34px;
         padding-bottom: 20px; 
+    }
+    .admin-btn button{
+        width: 300px;
+        margin: 10px;
+    }
+    .admin--section .container form{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+    .admin--section .container form input[type="submit"]{
+        width: 100%;
+    }
+    .admin--section .container{
+        padding: 30px 0;
     }
     .insert-product form{
         width: 100%;

@@ -20,7 +20,7 @@
     <?php include('./components/Header.php') ?>
     <div class="banner">
         <div class="container-fluid">
-            <span><img src="./images/Sketch-annotation-element-stroke-line-arrow-spiral-down-5.png"
+            <span class="arrow"><img src="./images/Sketch-annotation-element-stroke-line-arrow-spiral-down-5.png"
                     alt="sketch--icon"></span>
             <span class="star--icon">
                 <img src="./images/star--icon.png" alt="star--icon">
@@ -28,9 +28,8 @@
             <h1>Discover Furniture With
                 High Quality Wood</h1>
 
-            <p>Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, <br> adipiscing
-                mauris
-                non. Purus parturient viverra nunc, tortor sit laoreet. Quam tincidunt <br> aliquam adipiscing tempor.
+            <p>Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing
+                mauris non. Purus parturient viverra nunc, tortor sit laoreet. Quam tincidunt aliquam adipiscing tempor.
             </p>
         </div>
     </div>

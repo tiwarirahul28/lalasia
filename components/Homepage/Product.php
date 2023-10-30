@@ -4,7 +4,7 @@ include("./Database/connect.php");
 <div class="product--section">
     <p class="orange--heading">Product</p>
     <h2 class="heading">Our popular product</h2>
-    <p class="para pt-3">Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim <br>placerat nisi,
+    <p class="para pt-3">Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi,
         adipiscing mauris non purus parturient.</p>
     <div class="product--slider">
         <?php

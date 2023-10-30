@@ -2,12 +2,12 @@
     <div class="container-fluid p-0">
         <div class="row">
             <div class="col-md-8 left-side">
-                <a class="navbar-brand" href="admin.php"><img src="./images/logo.png" alt="brand-logo"></a>
+                <a class="navbar-brand" href="index.php"><img src="./images/logo.png" alt="brand-logo"></a>
                 <p>Lalasia is digital agency that help you make better experience iaculis cras in.</p>
             </div>
             <div class="col-md-4 right-side">
-                <div class="row">
-                    <div class="col-md-12">
+                <div class="rows">
+                    <div class="footer--info">
                         <h2>Follow Us</h2>
                         <a href="">Facebook</a>
                         <a href="">Instagram</a>
