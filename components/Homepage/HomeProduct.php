@@ -8,7 +8,7 @@ include("./Database/connect.php");
         adipiscing mauris non purus parturient.</p>
     <div class="product--slider">
         <?php
-        $select_Product = "SELECT * FROM `product`";
+        $select_Product = "SELECT * FROM `product` order by rand() LIMIT 0,6";
         $Product_Result = mysqli_query($connection, $select_Product);
         while ($row = mysqli_fetch_assoc($Product_Result)) {
             $Product_ID = $row['product_id'];
