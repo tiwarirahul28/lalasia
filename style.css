@@ -95,10 +95,16 @@
     position: relative;
 }
 .banner-form img{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
 }
-.banner-form input{
+.banner-form form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.banner-form form input{
     outline: none;
     border: none;
     color: #AFADB5;
@@ -116,7 +122,7 @@
     outline: none;
     box-shadow: none;
 }
-.banner-form button{
+.banner-form form input[type='submit']{
     background-color: #518581;
     color: #fff;
     font-size: 18px;
@@ -147,6 +153,7 @@
     font-size: 18px;
     font-weight: 300;
     line-height: 24px;
+    color: #AFADB5;
 }
 .right-side .row .col-md-4{
     display: flex;
@@ -156,10 +163,11 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 22px;
+    color: #151411;
 }
 .right-side .row .col-md-4 a{
     text-decoration: none;
-    color: #151411;
+    color: #AFADB5;
     font-size: 18px;
     font-weight: 300;
     line-height: 20px;
@@ -253,7 +261,6 @@
 
 .product--slider{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -342,6 +349,8 @@
     height: 200px;
     position: relative;
     padding: 32px 0px;
+    display: flex;
+    flex-direction: column;
 }
 .product--section .product--card .product--card--info .category{
     font-size: 18px;
@@ -362,14 +371,33 @@
     line-height: 23px;
     font-weight: 400;
 }
+.product--section .product--card .product--card--info .d-flex{
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+}
 .product--section .product--card .product--card--info .price{
     font-size: 26px;
     color: #151411;
     line-height: 34px;
     font-weight: 600;
-    white-space: pre-line;
-    position: absolute;
-    bottom: 1em;
+    /* white-space: pre-line; */
+    /* position: absolute; */
+    /* bottom: 3.5em; */
+    margin-bottom: 0;
+}
+.product--section .product--card .product--card--info a{
+    /* position: absolute; */
+    bottom: 3em;
+    text-decoration: none;
+    background: #518581;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 400;
 }
 /* Crafted */
 .crafetd--section{
@@ -705,9 +733,12 @@
     .banner-form{
         width: 100%;
     }
-    .banner-form input, .banner-form button{
+    .banner-form form input, .banner-form form input[type='submit']{
         font-size: 14px;
         line-height: 20px;
+    }
+    .banner-form form input[type='submit']{
+       padding: 10px 20px;
     }
     .banner-container .banner-img{
         margin-top: 2em;
@@ -776,11 +807,20 @@
         line-height: 20px;
         margin-bottom: 2px;
     }
+    .product--section .product--card .product--card--info .d-flex{
+        bottom: 0;
+    }
     .product--section .product--card .product--card--info .price{
         font-size: 16px;
         line-height: 24px;
         white-space: pre-line;
-        bottom: 0em;
+        bottom: 3em;
+        /* margin-bottom: 0.7rem; */
+    }
+    .product--section .product--card .product--card--info a{
+        padding: 8px 20px;
+        font-size: 12px;
+        bottom: 1em;
     }
     .crafetd--section .top--content, .crafetd--section .crafetd--bottom--content{
         display: flex;
@@ -846,5 +886,34 @@
         font-size: 10px;
         line-height: 13px;
         padding: 5px 15px;
+    }
+    .product--slider .slick-next{
+        right: 0;
+    }
+    .product--slider .slick-prev{
+        left: 0;
+    }
+    
+    .footer hr{
+        padding-bottom: 1em !important;
+        margin-top: 0;
+        color: #ECE4DE;
+    }
+    .left-side p{
+        font-size: 14px;
+        line-height: 25.2px;
+    }
+    .right-side .row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .right-side .row .col-md-4 h2{
+        font-size: 16px;
+        line-height: 20.8px;
+    }
+    .right-side .row .col-md-4 a{
+        color:#AFADB5;
+        font-size: 14px;
+        line-height: 25.2px;
     }
 }

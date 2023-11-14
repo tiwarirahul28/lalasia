@@ -27,7 +27,6 @@
             </span>
             <h1>Discover Furniture With
                 High Quality Wood</h1>
-
             <p>Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing
                 mauris non. Purus parturient viverra nunc, tortor sit laoreet. Quam tincidunt aliquam adipiscing tempor.
             </p>
@@ -36,8 +35,10 @@
     <div class="banner-container">
         <div class="banner-form">
             <img src="./images/search-normal.png" alt="search-icon">
-            <input class="form-control me-2" type="search" placeholder="Search property" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <form action="product.php?search_data=&search_product=Find+Now">
+                <input type="search" placeholder="Search property" name="search_data" autocomplete="off">
+                <input class="search-btn" type="submit" value="Find Now" name="search_product">
+            </form>
         </div>
         <div class="banner-img">
             <img src="./images/banner.png" alt="banner-image">
@@ -49,7 +50,5 @@
     <?php include('./components/Homepage/Testimonial.php') ?>
     <?php include('./components/Footer.php') ?>
     <?php include('./components/Scripts.php') ?>
-
 </body>
-
 </html>

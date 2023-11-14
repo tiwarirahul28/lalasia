@@ -1,5 +1,6 @@
 <footer class="footer">
     <div class="container-fluid p-0">
+        <hr class="pb-5">
         <div class="row">
             <div class="col-md-6 left-side">
                 <a class="navbar-brand" href="index.php"><img src="./images/logo.png" alt="brand-logo"></a>

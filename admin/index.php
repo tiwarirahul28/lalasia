@@ -33,10 +33,10 @@
                         <a href="" class="nav-link">View Categories</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link">Insert Brands</a>
+                        <a href="insert-articles.php" class="nav-link">Insert Articles</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link">View Brands</a>
+                        <a href="" class="nav-link">View Articles</a>
                     </button>
                     <button>
                         <a href="" class="nav-link">All Orders</a>

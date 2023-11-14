@@ -4,8 +4,10 @@ include("./Database/connect.php");
 <div class="sf--section">
     <div class="sf--search">
         <img src="./images/search-normal.png" alt="">
-        <input type="search" placeholder="Search property" name="search_data">
-        <input class="search-btn" type="submit" value="Find Now" name="search_product">
+        <form action="">
+            <input type="search" placeholder="Search property" name="search_data" autocomplete="off">
+            <input class="search-btn" type="submit" value="Find Now" name="search_product">
+        </form>
     </div>
     <div class="sf--filter">
         <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expand ed="false">
@@ -14,13 +16,13 @@ include("./Database/connect.php");
         </button>
         <ul class="dropdown-menu">
             <?php
-            $Selct_category = "SELECT * FROM `category`";
-            $category_Result = mysqli_query($connection, $Selct_category);
-            while ($row = mysqli_fetch_assoc($category_Result)) {
-                $category_ID = $row["category_id"];
-                $category_name = $row["category-name"];
-                echo '<li><a href="product.php?category=' . $category_ID . '">' . $category_name . '</a></li>';
-            }
+                $Selct_category = "SELECT * FROM `category`";
+                $category_Result = mysqli_query($connection, $Selct_category);
+                while ($row = mysqli_fetch_assoc($category_Result)) {
+                    $category_ID = $row["category_id"];
+                    $category_name = $row["category-name"];
+                    echo '<li><a href="product.php?category=' . $category_ID . '">' . $category_name . '</a></li>';
+                }
             ?>
         </ul>
     </div>
@@ -47,7 +49,10 @@ include("./Database/connect.php");
         width: 25px;
         height: 25px;
     }
-
+    .sf--section .sf--search form {
+        display: flex;
+        width: 100%;
+    }
     .sf--section .sf--search input {
         border: none;
         width: 100%;

@@ -14,6 +14,7 @@
         arrows: true,
         autoplay: true,
         autoplaySpeed: 2000,
+        pauseOnHover: true,
         responsive: [
             {
                 breakpoint: 480,
@@ -34,6 +35,7 @@
         autoplay: true,
         autoplaySpeed: 2000,
         infinite: true,
+        pauseOnHover: true,
         responsive: [
             {
                 breakpoint: 768,
@@ -63,12 +65,32 @@
         arrows: true,
         autoplay: true,
         autoplaySpeed: 2000,
+        pauseOnHover: true,
         responsive: [
             {
                 breakpoint: 480,
                 settings: {
                     arrows: false,
                     dots: true,
+                }
+            }
+        ]
+    });
+    $('.article-page-sliders').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        // autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    dots: false,
                 }
             }
         ]

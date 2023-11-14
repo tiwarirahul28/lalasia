@@ -114,23 +114,23 @@
 }
 
 /* Insert Product */
-.insert-product form{
+.insert-product form, .insert-article form{
     width: 70%;
     margin: auto;
     padding-bottom: 50px;
 }
-.insert-product form .form--outline {
+.insert-product form .form--outline , .insert-article form .form--outline{
     display: flex;
     flex-direction: column;
     margin: 15px 0px;
 }
-.insert-product form .form--outline label{
+.insert-product form .form--outline label, .insert-article form .form--outline label{
     padding: 5px 0;
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
 }
-.insert-product form .form--outline input, .form-select, .insert-product #product_description{
+.insert-product form .form--outline input, .form-select, .insert-product #product_description, .insert-article form .form--outline input, .insert-article #article_description{
     outline: none;
     color: #AFADB5;
     font-size: 18px;
@@ -140,7 +140,7 @@
     padding: 10px;
     border-radius: 5px;
 }
-.insert-product form .form--outline input::placeholder, #product_description::placeholder{
+.insert-product form .form--outline input::placeholder, #product_description::placeholder, .insert-article form .form--outline input::placeholder, #article_description::placeholder{
     color: #AFADB5;
     font-size: 18px;
     line-height: 28px;
@@ -149,12 +149,12 @@
 .form-select:focus{
     border: 1px solid #eee;
 }
-.insert-product form .form--outline input:focus, .form-select:focus{
+.insert-product form .form--outline input:focus, .form-select:focus, .insert-article form .form--outline input:focus{
     outline: none;
     box-shadow: none;
     /* border-color: none; */
 }
-.insert-product form .form--outline input[type="submit"]{
+.insert-product form .form--outline input[type="submit"], .insert-article form .form--outline input[type="submit"]{
     background-color: #518581;
     color: #fff;
     font-size: 18px;

@@ -1,9 +1,10 @@
 <?php
 include("./Database/connect.php");
+include("CommonFunction.php");
 ?>
 <div class="allproduct--section">
     <div class="allproduct--toppart">
-        <h2 class="heading">Total Product</h2>
+        <h2 class="heading">All Product</h2>
         <div class="sf--filter">
             <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expand ed="false">
                 <img src="./images/productimages/filter.png" alt="">
@@ -16,7 +17,7 @@ include("./Database/connect.php");
                 while ($row = mysqli_fetch_assoc($category_Result)) {
                     $category_ID = $row["category_id"];
                     $category_name = $row["category-name"];
-                    echo '<li><a href="product.php?category=' . $category_ID . '">' . $category_name . '</a></li>';
+                    echo '<li><a href="?category=' . $category_ID . '">' . $category_name . '</a></li>';
                 }
                 ?>
             </ul>
@@ -24,25 +25,9 @@ include("./Database/connect.php");
     </div>
     <div class="allproduct--bottom">
         <?php
-        $All_products = "SELECT * FROM `product` order by rand()";
-        $AllProduct_results = mysqli_query($connection, $All_products);
-        while ($row = mysqli_fetch_assoc($AllProduct_results)) {
-            $All_products_Id = $row["product_id"];
-            $All_products_Name = $row["product_title"];
-            $All_products_Price = $row["product_price"];
-            $All_products_Keyword = $row["product_keyword"];
-            $All_products_Image = $row["product_imageone"];
-            echo "<div class='allproduct--card'>
-                    <div class='allproduct--card--img'>
-                        <img src='./admin/product_images/$All_products_Image' alt='Product--Image'>
-                    </div>
-                    <div class='allproduct--card--info'>
-                        <h3>" . substr($All_products_Name, 0, 24) . "...</h3>
-                        <span>$All_products_Keyword</span>
-                        <p class='price'>Rs: $All_products_Price</p>
-                    </div>
-                </div>";
-        }
+        getAllProducts();
+        get_filter_products();
+        get_Search_Product();
         ?>
     </div>
 </div>
@@ -83,9 +68,19 @@ include("./Database/connect.php");
     .allproduct--bottom .allproduct--card .allproduct--card--info {
         height: 150px;
         padding: 10px 0px;
-
+        position: relative;
     }
-
+    .allproduct--bottom .allproduct--card .allproduct--card--info .d-flex {
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .allproduct--bottom .allproduct--card .allproduct--card--info .d-flex a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #518581;
+        padding: 10px 30px;
+    }
     .allproduct--bottom .allproduct--card .allproduct--card--info h3 {
         font-size: 26px;
         line-height: 33.8px;
@@ -106,6 +101,10 @@ include("./Database/connect.php");
         line-height: 31.2px;
         font-weight: 600;
         color: #151411;
+        margin-bottom: 0;
+    }
+    .allproduct--bottom div img{
+        width: 100%;
     }
 
     @media screen and (max-width: 768px) {
@@ -116,10 +115,16 @@ include("./Database/connect.php");
         .allproduct--toppart {
             grid-template-columns: repeat(1, 1fr);
         }
-
+        .allproduct--bottom .allproduct--card{
+            height: 300px;
+        }
+        .allproduct--bottom .allproduct--card .allproduct--card--img{
+            height: 150px;
+        }
         .allproduct--bottom {
             padding-top: 20px;
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
         }
 
         .allproduct--bottom .allproduct--card .allproduct--card--info h3 {
@@ -135,6 +140,16 @@ include("./Database/connect.php");
         .allproduct--bottom .allproduct--card .allproduct--card--info .price {
             font-size: 14px;
             line-height: 18.2px;
+        }
+        .allproduct--bottom .allproduct--card .allproduct--card--info .d-flex{
+            padding-top: 15px;
+            position: absolute;
+            width: 100%;
+            bottom: 20px;
+        }
+        .allproduct--bottom .allproduct--card .allproduct--card--info .d-flex a{
+            padding: 5px 10px;
+            font-size: 14px;
         }
 
     }

@@ -26,7 +26,10 @@ include("./Database/connect.php");
                     <div class='product--card--info'>
                         <h3>" . substr($Product_Title, 0, 24) . "...</h3>
                         <span>$Product_Keyword</span>
-                        <p class='price'>Rs: $Product_Price</p>
+                        <div class='d-flex'>
+                            <p class='price'>Rs: $Product_Price</p>
+                            <a href='ProductDetail.php?product_Id=$Product_ID'>View More</a>
+                        </div>
                     </div>
                 </div>"
             ;

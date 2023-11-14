@@ -63,8 +63,6 @@ if (isset($_POST["insert_product"])) {
             </div>
             <div class="form--outline">
                 <label for="product_description">Product Description</label>
-                <!-- <input type="text" name="product_description" id="product_description"
-                    placeholder="Enter Product Description" autocomplete="off"> -->
                 <textarea name="product_description" id="product_description" placeholder="Enter Product Description"
                     autocomplete="off" rows="5" cols="50"></textarea>
             </div>
