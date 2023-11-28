@@ -51,7 +51,7 @@
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '0px',
                     slidesToShow: 1
                 }
             }
@@ -77,12 +77,12 @@
         ]
     });
     $('.article-page-sliders').slick({
-        dots: false,
+        dots: true,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 2000,
         pauseOnHover: true,
         responsive: [
@@ -90,7 +90,7 @@
                 breakpoint: 480,
                 settings: {
                     arrows: false,
-                    dots: false,
+                    dots: true,
                 }
             }
         ]

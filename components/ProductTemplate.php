@@ -1,5 +1,6 @@
 <?php
 include("./Database/connect.php");
+require_once("./components/ProductPage/CommonFunction.php");
 
 if(isset($_GET['product_Id'])){
     $gotProductID = $_GET['product_Id'];
@@ -28,11 +29,41 @@ if(isset($_GET['product_Id'])){
         <h5 class="price">Rs: <?php echo $All_products_Price;?></h5>
         <div class="productdetail--button">
             <a href="">Buy Now</a>
-            <a href="" class="atc">Add To Cart</a>
+            <?php AddtoCart(); ?>
+            <a href="?add-to-cart=<?php echo $All_products_Id;?>" class="atc">Add To Cart</a>
+        </div>
+    </div>
+</div>
+<div class="related--section">
+    <h1 class="heading" c>Related Images</h1>
+    <div class="related--image">
+        <div>
+            <img src="./admin/product_images/<?php echo $All_products_ImageTwo;?>" alt="Product--Image">
+        </div>
+        <div>
+            <img src="./admin/product_images/<?php echo $All_products_ImageThree;?>" alt="Product--Image">
         </div>
     </div>
 </div>
 <style>
+    .related--section{
+        padding: 50px 100px;
+    }
+    .related--image{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 2em;
+    }
+    .related--image div, .related--image div img{
+        width: 100%;
+        height: 400px;
+    }
+    .related--image div img{
+        width: 100%;
+        height: 100%;
+    }
     .productdetail--section{
         padding: 150px 100px 50px;
         display: grid;
@@ -93,6 +124,17 @@ if(isset($_GET['product_Id'])){
         color: #151411;
     }
     @media screen and (max-width: 768px) {
+        .related--section{
+            padding: 50px 20px;
+        }
+        .related--image{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 1em;
+        }
+        .related--image div{
+            height: 200px;
+        }
         .productdetail--section{
             padding: 100px 20px 30px;
             grid-template-columns: repeat(1, 1fr);

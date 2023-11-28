@@ -1,10 +1,16 @@
 <?php
 include("./Database/connect.php");
-include("CommonFunction.php");
+require_once("CommonFunction.php");
 ?>
-<div class="allproduct--section">
+<div class="allproduct--section" id="top">
     <div class="allproduct--toppart">
-        <h2 class="heading">All Product</h2>
+        <h2 class="heading">Total Product
+        <?php
+            getTotalProduct();
+            getfilterTotalProduct();
+            getSerachTotalProduct();
+        ?> 
+        </h2>
         <div class="sf--filter">
             <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expand ed="false">
                 <img src="./images/productimages/filter.png" alt="">
@@ -17,7 +23,7 @@ include("CommonFunction.php");
                 while ($row = mysqli_fetch_assoc($category_Result)) {
                     $category_ID = $row["category_id"];
                     $category_name = $row["category-name"];
-                    echo '<li><a href="?category=' . $category_ID . '">' . $category_name . '</a></li>';
+                    echo '<li><a href="?category=' . $category_ID . '#top">' . $category_name . '</a></li>';
                 }
                 ?>
             </ul>
@@ -25,13 +31,17 @@ include("CommonFunction.php");
     </div>
     <div class="allproduct--bottom">
         <?php
-        getAllProducts();
+        get_AllProducts();
         get_filter_products();
         get_Search_Product();
         ?>
     </div>
 </div>
 <style>
+    #top{
+        padding-top: 100px;
+        margin-top: -100px;
+    }
     .allproduct--section {
         padding: 50px 100px 50px
     }
@@ -42,7 +52,15 @@ include("CommonFunction.php");
         align-items: center;
         gap: 2em;
     }
-
+    .allproduct--toppart .heading sup{
+        font-size: 16px;
+        background-color: #F9F9F9;
+        padding: 5px 20px;
+        border-radius: 50px;
+        color: #518581;
+        font-weight: 600;
+        line-height: 20.8px;
+    }
     .allproduct--bottom {
         padding-top: 50px;
         display: grid;
@@ -52,7 +70,7 @@ include("CommonFunction.php");
 
     .allproduct--bottom .allproduct--card {
         width: 100%;
-        height: 500px;
+        height: 550px;
     }
 
     .allproduct--bottom .allproduct--card .allproduct--card--img {
@@ -66,7 +84,7 @@ include("CommonFunction.php");
     }
 
     .allproduct--bottom .allproduct--card .allproduct--card--info {
-        height: 150px;
+        height: 180px;
         padding: 10px 0px;
         position: relative;
     }
@@ -116,7 +134,7 @@ include("CommonFunction.php");
             grid-template-columns: repeat(1, 1fr);
         }
         .allproduct--bottom .allproduct--card{
-            height: 300px;
+            height: 350px;
         }
         .allproduct--bottom .allproduct--card .allproduct--card--img{
             height: 150px;
@@ -150,6 +168,9 @@ include("CommonFunction.php");
         .allproduct--bottom .allproduct--card .allproduct--card--info .d-flex a{
             padding: 5px 10px;
             font-size: 14px;
+        }
+        .allproduct--toppart .heading sup{
+            font-size: 12px;
         }
 
     }

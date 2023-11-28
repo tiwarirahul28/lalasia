@@ -33,6 +33,9 @@
                         <a href="" class="nav-link">View Categories</a>
                     </button>
                     <button>
+                        <a href="index.php?insert-keyword" class="nav-link"> Articles Keyword</a>
+                    </button>
+                    <button>
                         <a href="insert-articles.php" class="nav-link">Insert Articles</a>
                     </button>
                     <button>
@@ -54,6 +57,9 @@
             <?php
             if (isset($_GET['insert-category'])) {
                 include('insert-category.php');
+            }
+            if (isset($_GET['insert-keyword'])) {
+                include('Insert-articlekeyword.php');
             }
             ?>
         </div>

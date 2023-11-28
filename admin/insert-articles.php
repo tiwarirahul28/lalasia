@@ -67,9 +67,19 @@ if (isset($_POST["insert_article"])) {
                     autocomplete="off" rows="5" cols="50"></textarea>
             </div>
             <div class="form--outline">
-                <label for="article_keyword">Article Keyword</label>
-                <input type="text" name="article_keyword" id="article_keyword" placeholder="Enter Article Keyword"
-                    autocomplete="off">
+                <label for="article_keyword">Article Category</label>
+                <select name="article_keyword" id="article_keyword" class="form-select">
+                    <option value="">Select a KeyWords</option>
+                    <?php
+                    $selectArticleKeyword = "SELECT * FROM `article_keywords`";
+                    $selectResult = mysqli_query($connection, $selectArticleKeyword);
+                    while ($row = mysqli_fetch_assoc($selectResult)) {
+                        $ArticleKeyword_id = $row['article_keyword_id'];
+                        $Keyword_name = $row['article_keyword_name'];
+                        echo '<option value="' . $ArticleKeyword_id . '">' . $Keyword_name . '</option>';
+                    }
+                    ?>
+                </select>
             </div>
             <div class="form--outline">
                 <label for="article_author_name">Article Author</label>

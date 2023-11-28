@@ -4,7 +4,7 @@ include("./Database/connect.php");
 <div class="sf--section">
     <div class="sf--search">
         <img src="./images/search-normal.png" alt="">
-        <form action="">
+        <form action="product.php#top">
             <input type="search" placeholder="Search property" name="search_data" autocomplete="off">
             <input class="search-btn" type="submit" value="Find Now" name="search_product">
         </form>
@@ -21,7 +21,7 @@ include("./Database/connect.php");
                 while ($row = mysqli_fetch_assoc($category_Result)) {
                     $category_ID = $row["category_id"];
                     $category_name = $row["category-name"];
-                    echo '<li><a href="product.php?category=' . $category_ID . '">' . $category_name . '</a></li>';
+                    echo '<li><a href="product.php?category=' . $category_ID . '#top">' . $category_name . '</a></li>';
                 }
             ?>
         </ul>

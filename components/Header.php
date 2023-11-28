@@ -1,3 +1,6 @@
+<?php 
+require_once("./components/ProductPage/CommonFunction.php");
+?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid p-0">
         <a class="navbar-brand" href="index.php"><img src="./images/logo.png" alt="brand-logo"></a>
@@ -22,7 +25,8 @@
             </ul>
         </div>
         <div class="head-icon">
-            <a href=""><img src="./images/bag-2.png" alt=""></a>
+        <?php Total_Price(); ?>
+            <a href=""><img src="./images/bag-2.png" alt=""> <sup><?php Cart_item_list(); ?></sup></a>
             <a href=""><img src="./images/user.png" alt=""></a>
         </div>
     </div>

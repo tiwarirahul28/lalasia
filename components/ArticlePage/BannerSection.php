@@ -83,7 +83,8 @@
     }
     .article--page--slider--section{
         padding: 0 100px;
-        height: 720px;
+        height: 800px;
+        margin-top: -5em;
     }
     .article-page-sliders{
         width: 100%;
@@ -219,7 +220,7 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        bottom: 0;
+        bottom: 20em;
         width: 100%;
     }
     .article-page-sliders .slick-dots li{
@@ -246,7 +247,8 @@
         }
         .article--page--slider--section{
             padding: 50px 20px;
-            height: 450px;
+            height: 500px;
+            margin-top: 0;
         }
         .article-page-sliders .article-page-slider--card{
             height: 250px;
@@ -274,6 +276,12 @@
         .article-page-sliders .article-page-slider--card .article-page-content--info .author{
             gap: 10px;
             margin-top: 1em;
+        }
+        .article-page-sliders .slick-dots{
+            bottom: 14em !important;
+        }
+        .article-page-sliders button.slick-next, .article-page-sliders button.slick-prev{
+            display: none !important;
         }
     }
 </style>
