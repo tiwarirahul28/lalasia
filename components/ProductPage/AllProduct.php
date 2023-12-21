@@ -101,7 +101,7 @@ require_once("CommonFunction.php");
     }
     .allproduct--bottom .allproduct--card .allproduct--card--info h3 {
         font-size: 26px;
-        line-height: 33.8px;
+        line-height: 40.8px;
         font-weight: 600;
         color: #151411;
         margin: 0;
@@ -109,7 +109,7 @@ require_once("CommonFunction.php");
 
     .allproduct--bottom .allproduct--card .allproduct--card--info span {
         font-size: 18px;
-        line-height: 32.4px;
+        line-height: 26.4px;
         font-weight: 400;
         color: #AFADB5;
     }

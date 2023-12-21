@@ -42,6 +42,7 @@ if (isset($_POST["insert_article"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/Frame.svg">
     <title>Insert Articles</title>
     <link rel="stylesheet" href="adminstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"

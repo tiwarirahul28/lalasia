@@ -55,7 +55,7 @@
 .admin-btn button{
     border: none;
     outline: none;
-    width: 200px;
+    width: 250px;
     margin: 15px;
 }
 .admin-btn button a{
@@ -64,6 +64,7 @@
     color: #fff;
     font-size: 18px;
     font-weight: 400;
+    border: 2px solid #518581;
 }
 .admin-btn button a:hover{
     background-color: #fff;
@@ -130,7 +131,7 @@
     line-height: 26px;
     font-weight: 600;
 }
-.insert-product form .form--outline input, .form-select, .insert-product #product_description, .insert-article form .form--outline input, .insert-article #article_description{
+.insert-product form .form--outline input, .form-select, .insert-product #product_description, .insert-article form .form--outline input, .insert-article #article_description, #short_description{
     outline: none;
     color: #AFADB5;
     font-size: 18px;
@@ -140,7 +141,7 @@
     padding: 10px;
     border-radius: 5px;
 }
-.insert-product form .form--outline input::placeholder, #product_description::placeholder, .insert-article form .form--outline input::placeholder, #article_description::placeholder{
+.insert-product form .form--outline input::placeholder, #product_description::placeholder, #short_description::placeholder, .insert-article form .form--outline input::placeholder, #article_description::placeholder{
     color: #AFADB5;
     font-size: 18px;
     line-height: 28px;
@@ -238,11 +239,11 @@
         font-size: 16px;
         line-height: 24px;
     }
-    .insert-product form .form--outline input, .form-select, .insert-product #product_description{
+    .insert-product form .form--outline input, .form-select, .insert-product #product_description, .insert-product #short_description{
         font-size: 18px;
         line-height: 26px;
     }
-    .insert-product form .form--outline input::placeholder, #product_description::placeholder{
+    .insert-product form .form--outline input::placeholder, #product_description::placeholder, #short_description::placeholder{
         color: #AFADB5;
         font-size: 16px;
         line-height: 24px;

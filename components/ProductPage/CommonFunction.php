@@ -1,5 +1,6 @@
 <?php 
-include("./Database/connect.php");
+// session_start();
+include_once("./Database/connect.php");
 
 function get_AllProducts(){
     global $connection;
@@ -12,7 +13,7 @@ function get_AllProducts(){
                 $All_products_Id = $row["product_id"];
                 $All_products_Name = $row["product_title"];
                 $All_products_Price = $row["product_price"];
-                $product_description = $row["product_description"];
+                $short_desription = $row["short_description"];
                 $Product_Category = $row["category-name"];
                 $All_products_Image = $row["product_imageone"];
                 echo "<div class='allproduct--card'>
@@ -22,9 +23,9 @@ function get_AllProducts(){
                         <div class='allproduct--card--info'>
                             <span>$Product_Category</span>
                             <h3>" . substr($All_products_Name, 0, 24) . "...</h3>
-                            <span>" . substr($product_description, 0, 40) . "..</span>
+                            <span>" . substr($short_desription, 0, 80) . "...</span>
                             <div class='d-flex'>
-                                <p class='price'>Rs: $All_products_Price</p>
+                                <p class='price'>₹: $All_products_Price</p>
                                 <a href='ProductDetail.php?product_Id=$All_products_Id'>View More</a>
                             </div>
                         </div>
@@ -94,7 +95,7 @@ function get_filter_products(){
                         <h3>" . substr($All_products_Name, 0, 24) . "...</h3>
                         <span>$All_products_Keyword</span>
                         <div class='d-flex'>
-                            <p class='price'>Rs: $All_products_Price</p>
+                            <p class='price'>₹: $All_products_Price</p>
                             <a href='ProductDetail.php?product_Id=$All_products_Id'>View More</a>
                         </div>
                     </div>
@@ -127,7 +128,7 @@ function get_Search_Product(){
                         <h3>" . substr($All_products_Name, 0, 24) . "...</h3>
                         <span>$All_products_Keyword</span>
                         <div class='d-flex'>
-                            <p class='price'>Rs: $All_products_Price</p>
+                            <p class='price'>₹: $All_products_Price</p>
                             <a href='ProductDetail.php?product_Id=$All_products_Id'>View More</a>
                         </div>
                     </div>
@@ -164,7 +165,7 @@ function AddtoCart() {
             echo "<script>window.open('ProductDetail.php?product_Id=$get_addproduct_Id', '_self')</script>";
         } else {
             // Insert the item into the cart
-            $insert_cart_item = "INSERT INTO `cart_details` (`product_id`, `ip_address`, `qunatity`, `time`) VALUES ('$get_addproduct_Id', '$get_ip_address', 0, NOW())";
+            $insert_cart_item = "INSERT INTO `cart_details` (`product_id`, `ip_address`, `quantity`, `time`) VALUES ('$get_addproduct_Id', '$get_ip_address', 1, NOW())";
             $insert_result = mysqli_query($connection, $insert_cart_item);
             if ($insert_result) {
                 echo "<script>alert('Item added to cart')</script>";

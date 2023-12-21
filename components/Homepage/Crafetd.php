@@ -33,3 +33,9 @@
         </div>
     </div>
 </div>
+<style>
+    .crafetd--right--cards img{
+        width: 100%;
+        height: 510px;
+    }
+</style>

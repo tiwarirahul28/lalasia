@@ -118,6 +118,9 @@
     line-height: 28px;
     font-weight: 400;
 }
+.banner-form form input[type=search]{
+    width: 100%;
+}
 .banner-form input::placeholder{
     color: #AFADB5;
     font-size: 18px;

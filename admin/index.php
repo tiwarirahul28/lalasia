@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/Frame.svg">
     <title>Admin Panel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -20,11 +21,11 @@
             <h1 class="text-center">Manage Details</h1>
             <div class="row">
                 <div class="col-md-12 admin-btn">
-                    <button>
+                    <!-- <button>
                         <a href="insert-product.php" class="nav-link">Insert Product</a>
-                    </button>
+                    </button> -->
                     <button>
-                        <a href="" class="nav-link">View Product</a>
+                        <a href="view-product.php" class="nav-link">Manage Products</a>
                     </button>
                     <button>
                         <a href="index.php?insert-category" class="nav-link">Insert Categories</a>
@@ -60,6 +61,12 @@
             }
             if (isset($_GET['insert-keyword'])) {
                 include('Insert-articlekeyword.php');
+            }
+            if (isset($_GET['view-product'])) {
+                include('view-product.php');
+            }
+            if (isset($_GET['product_id'])) {
+                include('update-product.php');
             }
             ?>
         </div>

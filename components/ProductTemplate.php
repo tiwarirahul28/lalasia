@@ -1,8 +1,8 @@
 <?php
 include("./Database/connect.php");
-require_once("./components/ProductPage/CommonFunction.php");
+// require_once("./components/ProductPage/CommonFunction.php");
 
-if(isset($_GET['product_Id'])){
+if (isset($_GET['product_Id'])) {
     $gotProductID = $_GET['product_Id'];
     $All_products = "SELECT * FROM `product` WHERE `product_Id` = '$gotProductID'";
     $AllProduct_results = mysqli_query($connection, $All_products);
@@ -12,6 +12,7 @@ if(isset($_GET['product_Id'])){
         $All_products_Price = $row["product_price"];
         $All_products_Keyword = $row["product_keyword"];
         $All_products_Description = $row["product_description"];
+        $All_short_Description = $row["short_description"];
         $All_products_ImageOne = $row["product_imageone"];
         $All_products_ImageTwo = $row["product_imagetwo"];
         $All_products_ImageThree = $row["product_imagethree"];
@@ -20,71 +21,88 @@ if(isset($_GET['product_Id'])){
 ?>
 <div class="productdetail--section">
     <div class="productdetail--section--img">
-        <img src="./admin/product_images/<?php echo $All_products_ImageOne;?>" alt="Product--Image">
+        <img src="./admin/product_images/<?php echo $All_products_ImageOne; ?>" alt="Product--Image">
     </div>
     <div class="productdetail--section--info">
-        <h1><?php echo $All_products_Name;?></h1>
-        <span><?php echo $All_products_Keyword;?></span>
-        <p><?php echo $All_products_Description;?></p>
-        <h5 class="price">Rs: <?php echo $All_products_Price;?></h5>
+        <h1><?php echo $All_products_Name; ?></h1>
+        <span><?php echo $All_products_Keyword; ?></span>
+        <p><?php echo $All_short_Description; ?></p>
+        <h5 class="price">₹: <?php echo $All_products_Price; ?></h5>
         <div class="productdetail--button">
             <a href="">Buy Now</a>
-            <?php AddtoCart(); ?>
-            <a href="?add-to-cart=<?php echo $All_products_Id;?>" class="atc">Add To Cart</a>
+            <a href="?add-to-cart=<?php echo $All_products_Id; ?>" class="atc">Add To Cart</a>
         </div>
     </div>
 </div>
 <div class="related--section">
-    <h1 class="heading" c>Related Images</h1>
+    <h1 class="heading">Related Images</h1>
     <div class="related--image">
         <div>
-            <img src="./admin/product_images/<?php echo $All_products_ImageTwo;?>" alt="Product--Image">
+            <img src="./admin/product_images/<?php echo $All_products_ImageTwo; ?>" alt="Product--Image">
         </div>
         <div>
-            <img src="./admin/product_images/<?php echo $All_products_ImageThree;?>" alt="Product--Image">
+            <img src="./admin/product_images/<?php echo $All_products_ImageThree; ?>" alt="Product--Image">
         </div>
     </div>
 </div>
+<div class="description--section">
+    <h1 class="heading">Product Description</h1>
+    <div class="description--image">
+        <p><?php echo $All_products_Description; ?></p>
+
+    </div>
+</div>
 <style>
-    .related--section{
+    .related--section, .description--section {
         padding: 50px 100px;
     }
-    .related--image{
+
+    .related--image {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
         margin-top: 2em;
     }
-    .related--image div, .related--image div img{
+
+    .related--image div,
+    .related--image div img {
         width: 100%;
         height: 400px;
     }
-    .related--image div img{
+
+    .related--image div img {
         width: 100%;
         height: 100%;
     }
-    .productdetail--section{
+
+    .productdetail--section {
         padding: 150px 100px 50px;
         display: grid;
         grid-template-columns: 40% 55%;
         gap: 5%;
     }
-    .productdetail--section .productdetail--section--img, .productdetail--section .productdetail--section--img img{
+
+    .productdetail--section .productdetail--section--img,
+    .productdetail--section .productdetail--section--img img {
         width: 100%;
         height: 600px;
     }
-    .productdetail--section .productdetail--section--info{
+
+    .productdetail--section .productdetail--section--info {
         padding: 20px 0;
     }
-    .productdetail--section .productdetail--section--info h1{
+
+    .productdetail--section .productdetail--section--info h1 {
         font-size: 44px;
         line-height: 57.2px;
         font-weight: 600;
         text-transform: capitalize;
         color: #151411;
     }
-    .productdetail--section .productdetail--section--info span, .productdetail--section .productdetail--section--info p{
+
+    .productdetail--section .productdetail--section--info span,
+    .productdetail--section .productdetail--section--info p {
         font-size: 18px;
         line-height: 32.4px;
         font-weight: 400;
@@ -92,7 +110,8 @@ if(isset($_GET['product_Id'])){
         color: #AFADB5;
         padding: 10px 0;
     }
-    .productdetail--section .productdetail--section--info .price{
+
+    .productdetail--section .productdetail--section--info .price {
         font-size: 44px;
         line-height: 57.2px;
         font-weight: 600;
@@ -100,14 +119,16 @@ if(isset($_GET['product_Id'])){
         color: #151411;
         padding-top: 30px;
     }
-    .productdetail--button{
+
+    .productdetail--button {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 50px;
         padding-top: 50px;
     }
-    .productdetail--button a{
+
+    .productdetail--button a {
         background-color: #518581;
         width: 100%;
         text-align: center;
@@ -118,49 +139,62 @@ if(isset($_GET['product_Id'])){
         line-height: 23.4px;
         font-weight: 600;
     }
-    .productdetail--button .atc{
+
+    .productdetail--button .atc {
         background-color: #fff;
         border: 2px solid #F3F3F3;
         color: #151411;
     }
+
     @media screen and (max-width: 768px) {
-        .related--section{
+        .related--section {
             padding: 50px 20px;
         }
-        .related--image{
+
+        .related--image {
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-top: 1em;
         }
-        .related--image div{
+
+        .related--image div {
             height: 200px;
         }
-        .productdetail--section{
+
+        .productdetail--section {
             padding: 100px 20px 30px;
             grid-template-columns: repeat(1, 1fr);
             gap: 0%;
         }
-        .productdetail--section .productdetail--section--img, .productdetail--section .productdetail--section--img img{
+
+        .productdetail--section .productdetail--section--img,
+        .productdetail--section .productdetail--section--img img {
             /* width: 100%; */
             height: 400px;
         }
-        .productdetail--section .productdetail--section--info h1{
+
+        .productdetail--section .productdetail--section--info h1 {
             font-size: 24px;
             line-height: 31.2px;
         }
-        .productdetail--section .productdetail--section--info{
+
+        .productdetail--section .productdetail--section--info {
             padding: 20px 0;
         }
-        .productdetail--section .productdetail--section--info span, .productdetail--section .productdetail--section--info p{
+
+        .productdetail--section .productdetail--section--info span,
+        .productdetail--section .productdetail--section--info p {
             font-size: 14px;
             line-height: 25.2px;
         }
-        .productdetail--section .productdetail--section--info .price{
+
+        .productdetail--section .productdetail--section--info .price {
             font-size: 24px;
             line-height: 31.2px;
             padding-top: 0;
         }
-        .productdetail--button{
+
+        .productdetail--button {
             padding-top: 20px;
             gap: 20px;
             flex-direction: column;

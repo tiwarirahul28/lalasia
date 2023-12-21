@@ -28,7 +28,7 @@ include("./Database/connect.php");
                         <h3>" . substr($Product_Title, 0, 24) . "...</h3>
                         <span>$Product_Keyword</span>
                         <div class='d-flex'>
-                            <p class='price'>Rs: $Product_Price</p>
+                            <p class='price'>₹: $Product_Price</p>
                             <a href='ProductDetail.php?product_Id=$Product_ID'>View More</a>
                         </div>
                     </div>

@@ -95,4 +95,23 @@
             }
         ]
     });
+    $('.article--slider').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        // autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                }
+            }
+        ]
+    });
 </script>
